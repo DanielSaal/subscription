@@ -1,0 +1,8 @@
+CREATE TABLE subscription (
+    id VARCHAR(100) NOT NULL,
+    status_id INTEGER NOT NULL,
+    created_at TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP NULL,
+    CONSTRAINT PK_SUBSCRIPTION PRIMARY KEY (id),
+    CONSTRAINT FK_STATUS FOREIGN KEY (status_id) REFERENCES status (id)
+);

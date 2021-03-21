@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    environment:
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: "subscription"
+      MYSQL_ROOT_PASSWORD: "a1b2c3"
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'

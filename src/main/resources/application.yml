@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        subscriptions_out:
+          destination: subscriptions
+          contentType: application/json
+        subscriptions_in:
+          destination: subscriptions
+          contentType: application/json
+          consumer:
+            max-attempts: 1
+  datasource:
+    url: jdbc:mysql://localhost:3306/subscription
+    username: root
+    password: a1b2c3
+  flyway:
+    url: jdbc:mysql://localhost:3306/subscription
+    user: root
+    password: a1b2c3
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: rabbitmq
+    password: rabbitmq

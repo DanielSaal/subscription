@@ -1,0 +1,8 @@
+CREATE TABLE event_history (
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    type VARCHAR(100) NOT NULL,
+    subscription_id VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP NOT NULL,
+    CONSTRAINT PK_EVENT_HISTORY PRIMARY KEY (id),
+    CONSTRAINT FK_SUBSCRIPTION FOREIGN KEY (subscription_id) REFERENCES subscription (id)
+)
