@@ -22,9 +22,6 @@
 - Processamento e Persistencia
 
 ## Considerações Gerais
-Você deverá usar este repositório como o repo principal do projeto, i.e.,
-todos os seus commits devem estar registrados aqui, pois queremos ver como
-você trabalha.
 
 Esse problema tem algumas constraints:
 
